@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: GRAY;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingApp.View_Controller.HomeController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="31.0" prefWidth="147.0" text="Appointments" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="-1.0" layoutY="110.0" prefHeight="691.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="weekTab" text="This Week's Appointments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appointmentsThisWeekView" prefHeight="663.0" prefWidth="1280.0" style="-fx-background-color: #999970;">
+                          <columns>
+                            <TableColumn fx:id="weekNameColumn" prefWidth="145.0" text="Name" />
+                            <TableColumn fx:id="weekTitleColumn" prefWidth="96.0" text="Title" />
+                              <TableColumn fx:id="weekDescriptionColumn" prefWidth="145.0" text="Description" />
+                              <TableColumn fx:id="weekLocationColumn" prefWidth="88.0" text="Location" />
+                              <TableColumn fx:id="weekContactColumn" prefWidth="124.0" text="Contact" />
+                              <TableColumn fx:id="weekTypeColumn" prefWidth="141.0" text="Type" />
+                              <TableColumn fx:id="weekUrlColumn" prefWidth="218.0" text="URL" />
+                              <TableColumn fx:id="weekStartColumn" prefWidth="158.0" text="Start Time" />
+                              <TableColumn fx:id="weekEndColumn" prefWidth="164.0" text="End Time" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="monthTab" text="This Month's Appointments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appointmentsThisMonthView" prefHeight="663.0" prefWidth="1280.0" style="-fx-background-color: #999950;">
+                           <columns>
+                              <TableColumn fx:id="monthNameColumn" prefWidth="145.0" text="Name" />
+                              <TableColumn fx:id="monthTitleColumn" prefWidth="96.0" text="Title" />
+                              <TableColumn fx:id="monthDescriptionColumn" prefWidth="145.0" text="Description" />
+                              <TableColumn fx:id="monthLocationColumn" prefWidth="88.0" text="Location" />
+                              <TableColumn fx:id="monthContactColumn" prefWidth="124.0" text="Contact" />
+                              <TableColumn fx:id="monthTypeColumn" prefWidth="141.0" text="Type" />
+                              <TableColumn fx:id="monthUrlColumn" prefWidth="218.0" text="URL" />
+                              <TableColumn fx:id="monthStartColumn" prefWidth="158.0" text="Start Time" />
+                              <TableColumn fx:id="monthEndColumn" prefWidth="164.0" text="End Time" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="allTab" text="All Appointments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="allAppointmentsTableView" prefHeight="663.0" prefWidth="1280.0" style="-fx-background-color: #999930;">
+                           <columns>
+                              <TableColumn fx:id="allAppointmentsNameColumn" prefWidth="145.0" text="Name" />
+                              <TableColumn fx:id="allAppointmentsTitleColumn" prefWidth="96.0" text="Title" />
+                              <TableColumn fx:id="allAppointmentsDescriptionColumn" prefWidth="145.0" text="Description" />
+                              <TableColumn fx:id="allAppointmentsLocationColumn" prefWidth="88.0" text="Location" />
+                              <TableColumn fx:id="allAppointmentsContactColumn" prefWidth="124.0" text="Contact" />
+                              <TableColumn fx:id="allAppointmentsTypeColumn" prefWidth="141.0" text="Type" />
+                              <TableColumn fx:id="allAppointmentsUrlColumn" prefWidth="218.0" text="URL" />
+                              <TableColumn fx:id="allAppointmentsStartColumn" prefWidth="158.0" text="Start Time" />
+                              <TableColumn fx:id="allAppointmentsEndColumn" prefWidth="164.0" text="End Time" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <GridPane alignment="CENTER" layoutX="230.0" prefHeight="106.0" prefWidth="898.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#addCustomerClicked" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Lightgreen;" text="Add Customer" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#modifyCustomerClicked" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Lightgreen;" text="Update Customer" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteCustomerClicked" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: Lightgreen;" text="Delete Customer" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addAppointmentClicked" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: teal;" text="New Appointment" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#modifyAppointmentClicked" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: teal;" text="Modify Appointment" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#deleteAppointmentClicked" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: teal;" text="Delete Appointment" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#getUserLogs" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: ORANGE;" text="Logs" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#reportButtonClicked" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: ORANGE;" text="Reports" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#exitButtonClicked" prefHeight="28.0" prefWidth="200.0" style="-fx-background-color: OrangeRed;" text="Exit" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
